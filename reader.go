@@ -230,6 +230,7 @@ func decodeLineOfMasterPlaylist(p *MasterPlaylist, state *decodingState, line st
 		var alt Alternative
 		state.listType = MASTER
 		for k, v := range decodeParamsLine(line[13:]) {
+			fmt.Printf("k: %s, v: %s\n", k, v)
 			switch k {
 			case "TYPE":
 				alt.Type = v
